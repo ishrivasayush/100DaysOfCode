@@ -1,0 +1,14 @@
+package Week1.FlowControl;
+
+public class ComparisonOperatores {
+    public static void main(String[] args) {
+        int x=1;
+        int y=1;
+        System.out.println(x==y);
+        System.out.println(x!=y);
+        System.out.println(x>y);
+        System.out.println(x<y);
+        System.out.println(x<=y);
+        System.out.println(x>=y);
+    }
+}
