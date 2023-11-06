@@ -23,11 +23,26 @@ public class  App
         System.out.println(sessionFactory);
         
         //creating Student
+        Certificate certificate =new Certificate();
+        certificate.setCourse("Java");
+        certificate.setDuration("Three Years");
+
+        Certificate certificate1 =new Certificate();
+        certificate1.setCourse("Hibernate");
+        certificate1.setDuration("Two Years");
+
+
         Student student=new Student();
-        student.setId(101);
-        student.setCity("Delhi");
-        student.setName("Ayush");
-        System.out.println(student);
+        student.setId(102);
+        student.setName("Ayush Shrivastava");
+        student.setCity("Kanpur");
+        student.setCertificate(certificate);
+
+        Student student1=new Student();
+        student1.setId(103);
+        student1.setName("Abhay Shrivastava");
+        student1.setCity("Kanpur");
+        student1.setCertificate(certificate1);
 
         //creating Object of Address
         Address address=new Address();
@@ -48,7 +63,7 @@ public class  App
         Session currentSession = sessionFactory.openSession();
         Transaction transaction = currentSession.beginTransaction();
         currentSession.save(student);
-        currentSession.save(address);
+        currentSession.save(student1);
         transaction.commit();
 
         currentSession.close();

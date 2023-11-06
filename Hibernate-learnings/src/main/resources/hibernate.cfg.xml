@@ -26,6 +26,9 @@
         <property name="hbm2ddl.auto">create</property>
         <property name="show_sql">true</property>
         <mapping class="org.narainox.Student"></mapping>
+        <mapping class="org.narainox.Certificate"></mapping>
+        <mapping class="org.narainox.Mappings.Answer"></mapping>
+        <mapping class="org.narainox.Mappings.Question"></mapping>
         <mapping class="org.narainox.Address"></mapping>
 
     </session-factory>
