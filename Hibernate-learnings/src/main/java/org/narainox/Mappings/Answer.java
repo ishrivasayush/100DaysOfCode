@@ -2,6 +2,7 @@ package org.narainox.Mappings;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 
 @Entity
@@ -9,7 +10,9 @@ public class Answer {
     @Id
     int answer_id;
     String answer;
-    @OneToOne(mappedBy = "answer")
+//    @OneToOne(mappedBy = "answer")
+
+    @ManyToOne
     Question question;
 
     public Question getQuestion() {

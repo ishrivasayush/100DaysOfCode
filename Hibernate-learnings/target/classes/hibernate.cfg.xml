@@ -23,11 +23,13 @@
             org.hibernate.dialect.MySQLDialect
         </property>
 
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <mapping class="org.narainox.Student"></mapping>
         <mapping class="org.narainox.Certificate"></mapping>
         <mapping class="org.narainox.Mappings.Answer"></mapping>
+        <mapping class="org.narainox.Mappings.ManyTomany.Employee"></mapping>
+        <mapping class="org.narainox.Mappings.ManyTomany.Project"></mapping>
         <mapping class="org.narainox.Mappings.Question"></mapping>
         <mapping class="org.narainox.Address"></mapping>
 

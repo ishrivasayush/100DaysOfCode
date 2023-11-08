@@ -2,15 +2,41 @@ package org.narainox.Mappings;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Question {
     @Id
     int question_id;
     String question;
 
+    /*
     @OneToOne
-            @JoinColumn(name="answer_id")
-    Answer answer;
+    @JoinColumn(name="answer_id")
+
+     */
+
+    @OneToMany(mappedBy = "question")
+    private List<Answer> answers;
+
+
+
+
+
+
+    public Question(int question_id, String question, List<Answer> answers) {
+        this.question_id = question_id;
+        this.question = question;
+        this.answers = answers;
+    }
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
 
     public Question() {
     }
@@ -31,6 +57,7 @@ public class Question {
         this.question = question;
     }
 
+    /*
     public Answer getAnswer() {
         return answer;
     }
@@ -39,9 +66,13 @@ public class Question {
         this.answer = answer;
     }
 
+
+
     public Question(int question_id, String question, Answer answer) {
         this.question_id = question_id;
         this.question = question;
         this.answer = answer;
     }
+
+     */
 }

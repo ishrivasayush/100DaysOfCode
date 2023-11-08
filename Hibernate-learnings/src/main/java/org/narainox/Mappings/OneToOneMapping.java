@@ -20,7 +20,7 @@ public class OneToOneMapping {
         answer.setAnswer("Java is a programming language.");
         answer.setQuestion(question);
 
-        question.setAnswer(answer);
+        // question.setAnswer(answer);
 
         //Session
         Session session= sessionFactory.openSession();
