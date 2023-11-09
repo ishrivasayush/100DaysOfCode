@@ -11,6 +11,7 @@ import java.util.List;
 public class OneToManyMapping {
     public static void main(String[] args) {
         SessionFactory sessionFactory=new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+
         //creating Question
         Question question=new Question();
         question.setQuestion_id(502);

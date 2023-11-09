@@ -23,7 +23,14 @@ public class Answer {
         this.question = question;
     }
 
-
+    @Override
+    public String toString() {
+        return "Answer{" +
+                "answer_id=" + answer_id +
+                ", answer='" + answer + '\'' +
+                ", question=" + question +
+                '}';
+    }
 
     public Answer() {
     }

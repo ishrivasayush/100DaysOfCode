@@ -16,7 +16,7 @@ public class Question {
 
      */
 
-    @OneToMany(mappedBy = "question")
+    @OneToMany(mappedBy = "question",fetch = FetchType.EAGER)
     private List<Answer> answers;
 
 
@@ -51,6 +51,15 @@ public class Question {
 
     public String getQuestion() {
         return question;
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "question_id=" + question_id +
+                ", question='" + question + '\'' +
+                ", answers=" + answers +
+                '}';
     }
 
     public void setQuestion(String question) {
