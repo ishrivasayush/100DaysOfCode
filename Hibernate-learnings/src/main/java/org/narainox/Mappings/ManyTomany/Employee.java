@@ -1,8 +1,6 @@
 package org.narainox.Mappings.ManyTomany;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -12,7 +10,12 @@ public class Employee {
     private int eid;
     private String name;
 
-    @ManyToMany()
+    @ManyToMany
+    @JoinTable(
+            name = "employee_Learning",
+            joinColumns = {@JoinColumn(name ="eid")},
+            inverseJoinColumns = {@JoinColumn(name = "pid")}
+    )
     private List<Project> projects;
 
     public Employee() {
